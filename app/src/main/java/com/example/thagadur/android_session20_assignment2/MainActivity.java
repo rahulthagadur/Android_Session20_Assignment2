@@ -19,7 +19,7 @@ public class MainActivity extends Activity {
 //        Check whether the Contact Exits or Not
         if (UpdateContacts.isTheNumberExistsinContacts(
                 getApplicationContext(), "9876543211")) {
-            Log.i(UpdateContacts.TAG, "Exists");
+            Log.i(UpdateContacts.TAG, "Contaacts Added");
             try {
 //                Update the Contacts via functions
                 UpdateContacts.updateContact(getApplicationContext(), "RAVINDRA BABU", "1234567899");
@@ -29,6 +29,7 @@ public class MainActivity extends Activity {
                 e.printStackTrace();
             }
         } else {
+            Log.i(UpdateContacts.TAG, "Not Exists");
             Toast.makeText(this, "CONTACT DOES NOT EXIST", Toast.LENGTH_SHORT).show();
         }
 
